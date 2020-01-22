@@ -5,6 +5,7 @@ import java.nio.channels.FileChannel;
 
 public class CopyFile {
 
+    // normal
     public static void copyFileByStream(File input, File output) throws IOException {
         try (FileInputStream inputStream = new FileInputStream(input);
              FileOutputStream outputStream = new FileOutputStream(output)) {
@@ -17,6 +18,7 @@ public class CopyFile {
         }
     }
 
+    // zero copy
     public static void copyFileByChannel(File input, File output) throws IOException {
         try (FileChannel inputChannel = new FileInputStream(input).getChannel();
           FileChannel outputChannel = new FileOutputStream(output).getChannel();) {
