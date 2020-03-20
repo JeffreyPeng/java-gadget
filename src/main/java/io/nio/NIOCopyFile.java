@@ -3,7 +3,7 @@ package io.nio;
 import java.io.*;
 import java.nio.channels.FileChannel;
 
-public class CopyFile {
+public class NIOCopyFile {
 
     // normal
     public static void copyFileByStream(File input, File output) throws IOException {
