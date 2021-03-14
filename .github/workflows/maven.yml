@@ -30,7 +30,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.SSHKEY }}
-        source: "."
+        source: "./target"
         target: "/tmp"
 
     - name: Executing remote command
